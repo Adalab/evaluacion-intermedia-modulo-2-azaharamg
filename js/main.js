@@ -9,15 +9,15 @@ function handleFormSubmit(event) {
   event.preventDefault();
 }
 
-const checkNumbers = () => {
+const checkNumbers = number => {
   const inputValue = document.querySelector(".js-input").value;
   console.log(inputValue);
   let pistaEl = document.querySelector(".js-clue");
-  if (inputValue > randomNumber) {
+  if (inputValue > number) {
     pistaEl.innerHTML = "Demasiado alto";
-  } else if (inputValue < randomNumber) {
+  } else if (inputValue < number) {
     pistaEl.innerHTML = "Demasiado bajo";
-  } else if (inputValue === randomNumber) {
+  } else if (inputValue === number) {
     pistaEl.innerHTML = "Has ganado campeona!!!";
   } else {
     pistaEl.innerHTML = "El número debe estar entre 1 y 100";
@@ -26,8 +26,8 @@ const checkNumbers = () => {
 
 const handleValue = () => {
   handleFormSubmit(event);
-  randomNumber(100);
-  checkNumbers();
+  const number = randomNumber(100);
+  checkNumbers(number);
   counter();
 };
 
