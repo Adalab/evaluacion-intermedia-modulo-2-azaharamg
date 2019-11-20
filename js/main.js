@@ -1,9 +1,8 @@
 "use strict";
 
 const randomNumber = function getRandomNumber(max) {
-  return Math.ceil(Math.random() * 100);
+  return Math.ceil(Math.random() * max);
 };
-randomNumber(100);
 console.log(randomNumber(100));
 
 function handleFormSubmit(event) {
@@ -11,14 +10,14 @@ function handleFormSubmit(event) {
 }
 
 const checkNumbers = () => {
-  const inputValue = document.querySelector(".js-input");
+  const inputValue = document.querySelector(".js-input").value;
   console.log(inputValue);
   let pistaEl = document.querySelector(".js-clue");
-  if (inputValue > randomNumber) {
+  if (inputValue > getRandomNumber) {
     pistaEl.innerHTML = "Demasiado alto";
-  } else if (inputValue < randomNumber) {
+  } else if (inputValue < getRandomNumber) {
     pistaEl.innerHTML = "Demasiado bajo";
-  } else if (inputValue === randomNumber) {
+  } else if (inputValue === getRandomNumber) {
     pistaEl.innerHTML = "Has ganado campeona!!!";
   } else {
     pistaEl.innerHTML = "El número debe estar entre 1 y 100";
@@ -27,6 +26,7 @@ const checkNumbers = () => {
 
 const handleValue = () => {
   handleFormSubmit(event);
+  //randomNumber(100);
   checkNumbers();
   counter();
 };
