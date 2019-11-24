@@ -10,18 +10,18 @@
 </head>
 
 <body>
-  <main>
-    <h1>Adivina el número</h1>
-    <form action="">
+  <main class="main">
+    <h1 class="main__title">Adivina el número</h1>
+    <form class="form">
       <label for="number">Introduce aquí tu número:</label>
-      <input class="js-input" type="text" name="number" id="number">
-      <button class="js-button">Prueba</button>
+      <input class="js-input" type="number" name="number" id="number" placeholder="5">
+      <button class="button js-button">Prueba</button>
     </form>
-    <section>
-      <p class="js-clue">Pista: Escribe el número y dale a Prueba</p>
+    <section class="section">
+      <p>Pista: <span class="js-clue">Escribe el número y dale a Prueba</span></p>
     </section>
-    <section>
-      <p class="js-try">Número de intentos: 0</p>
+    <section class="section">
+      <p>Número de intentos: <span class="js-try">0</span></p>
     </section>
   </main>
   <script type="text/javascript" src="./js/main.js"></script>
