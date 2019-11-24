@@ -23,9 +23,10 @@
   align-items: center;
 }
 
-.button {
-  padding: 15px;
-  margin: 10px;
+.button,
+.reset {
+  padding: 12px;
+  margin: 20px;
   border-radius: 50%;
   background: darkgrey;
   color: white;
